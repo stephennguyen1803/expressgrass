@@ -1,0 +1,21 @@
+<div class="customerpictures">
+	<div class="top-main">
+		<?php echo $this->getChildHtml('avatar') ?>
+		<?php echo $this->getChildHtml('upload') ?>
+		<div class="clearer"></div>
+	</div>
+	<div class="customerpictures-image-list">
+		<?php echo $this->getChildHtml('list') ?>
+	</div>
+	<div class="clearer"></div>
+	<div class="calcel-account">
+		<button onclick="cancelAccount()"><span><span>Close your account / delete all uploaded photos</span></span></button>
+	</div>
+</div>
+<script type="text/javascript">
+	function cancelAccount(){
+		if (confirm("Are you sure you wish to delete your customer photo account ?")) {
+			window.location = '<?php echo $this->getUrl('customerpictures/user/cancel') ?>';
+		}
+	}
+</script>

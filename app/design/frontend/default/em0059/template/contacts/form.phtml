@@ -1,0 +1,178 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="page-title title-grass">
+    <h1><?php echo Mage::helper('contacts')->__('Contact Us') ?></h1>
+</div>
+<form action="<?php echo Mage::getUrl('quotes/index/post') ?>" id="quoteForm" method="post">
+<!--id of email -->
+<input type="text" name="id" style="display:none" value="5" />
+<!--------------->
+<div style="margin-bottom:20px; overflow:hidden;">
+<div class="images-left" style=" height:200px; width:270px; float:left"></div>
+<div style="float:left; width:426px" >
+	<div style="color:#588418;font-size:18px; ">
+	  <p>Tribune Drive <br />
+	    Trinity Trading Estate <br />
+	    Sittingbourne <br />
+	    Kent <br />
+	    ME10 2PG</p>
+	</div>
+	<div><span style="font-size:22px; color:#444">0844 855 4704 </span ><span style="font-size:11px; color:#444";>Local Rate<br />
+	  Sales Order Lines<span style="font-size: 15px; font-weight: normal; color:#444"> 24hrs 7 days a week</span><br />
+      Customer Services / Technical Advice (Mon-Thur 9:00-5:30, Fri 9:00-4:00 )</span></div>
+</div>
+</div>
+
+<div style="clear:both">
+  <p><span style="font-size: 20px; font-weight: normal; color:#444">Come and visit us today.</span> </p>
+  <p><span><strong>Warehouse/Showroom Open Mon - Fri 9am - 5pm &amp; Sat 9am - 1pm</strong></span></p>
+</div>
+<p style="color:#444; font-size:12px;"><br />
+  Unlike other online retailers your welcome to visit our warehouse and showroom without an appointment. Pop in and see us with your measurements and we can show you the best way to complete your artificial grass project.</p>
+<p style="color:#444; font-size:12px;"><span style="font-weight: bold;">Want to take your artificial grass home with you?</span> No problem we'll cut to size while you wait. Save on delivery charges and start your installation the same day.</p>
+<p style="color:#444; font-size:12px;">&nbsp;</p>
+<span style="font-size: 20px; font-weight: normal; color:#444">Technical / Installation Questions?...&nbsp;<a href="your_artificial_grass_questions">Click Here</a></span><p>&nbsp;</p>
+<span style="font-size: 20px; font-weight: normal; color:#444">Requesting Product Samples?...&nbsp;<a href="grass-request-sample">Click Here</a></span><p>&nbsp;</p>
+<table style="width: 559px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+<p>&nbsp;</p>
+<tr valign="TOP">
+
+<td colspan="4" height="30">
+<p><strong>
+Please only use the form below for Customer Services  </strong><br />
+</p>
+</td>
+</tr>
+<tr>
+
+
+<td valign="MIDDLE" width="90" height="25">
+<p><span class="style16" style="font-weight: bold;">Name</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input type="text" name="name" id="name" size="37" /></p>
+<div id="sample_terrace_Name_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="25">
+<p><span class="style16" style="font-weight: bold;">Address</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input  type="text" name="address1" size="45" /></p>
+<div id="sample_terrace_Address_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td height="48">&nbsp;</td>
+<td colspan="3" valign="top">
+<p><input  type="text" name="address2" size="45" /></p>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="48">
+<p>&nbsp;</p>
+</td>
+<td colspan="3" valign="MIDDLE" height="25">
+<p><input type="text" name="address3" size="45" /></p>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="25">
+<p><span class="style16" style="font-weight: bold;">Postcode</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input type="text" name="postcode" size="20" /></p>
+<div id="sample_terrace_Postcode_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="48">
+<p><span class="style16">Tel</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input type="text" name="tel" size="20" /></p>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="26">
+<p><span class="style16" style="font-weight: bold;">Email</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input type="text" name="email" size="37" /></p>
+<div id="sample_terrace_email_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td valign="TOP" height="46">
+<p><span class="style16" style="font-weight: bold;"> Order Reference</span></p>
+</td>
+<td colspan="3" valign="top"><input id="How_did_you_hear_about_us" type="text" name="infor-from" size="37" />
+<div id="sample_terrace_How_did_you_hear_about_us_errorloc" class="error_strings">&nbsp;</div>
+<br /></td>
+</tr>
+<tr>
+<td valign="TOP" height="130">
+<p><span class="style16">Your Message</span></p>
+</td>
+<td valign="TOP">
+<p><textarea name="enquiry" rows="5" cols="65"></textarea></p>
+</td>
+</tr>
+<tr>
+<td valign="TOP" height="30"></td>
+<td valign="TOP">
+
+<div class="g-recaptcha" data-sitekey="6Ld9gxkTAAAAAB4c-9f2_TyFY6BSX9iLl3Tbelv3"></div>
+
+
+
+<p><input type="hidden" name="subject" value="Website Contact Form" /><input  style="cursor:pointer" type="SUBMIT" value="Submit" /></p>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="MIDDLE" height="30">
+<p><span class="style17"><br /> <br /> </span></p>
+</td>
+</tr>
+<tr>
+<td height="1">&nbsp;</td>
+<td width="442">&nbsp;</td>
+<td width="4">&nbsp;</td>
+<td width="23">&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</form>
+
+<script type="text/javascript">
+//<![CDATA[
+    var contactForm = new VarienForm('contactForm', true);
+//]]>
+</script>

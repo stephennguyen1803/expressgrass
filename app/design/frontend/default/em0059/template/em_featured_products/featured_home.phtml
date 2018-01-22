@@ -1,0 +1,86 @@
+<?php
+    $pageLayout = str_replace(array('page/','.phtml'),'',Mage::app()->getLayout()->getBlock('root')->getTemplate());	
+	$_columnCount = 4;
+	
+	if($pageLayout == '1column')
+		$_columnCount = 5;
+	
+	else if($pageLayout == '3columns') 
+		$_columnCount = 3;        
+    
+    $n = count($this->getProductCollection()); 
+    
+    $config = new EM_Em0059settings_Em0059settings();
+    $w = $config->get_featured_width();
+    $h = $config->get_featured_height();
+    $bg = $config->get_featured_bgcolor();
+    $_helper = $this->helper('catalog/output');	
+?>
+
+<div class="featured-product-home">
+    <div class="widget-title">
+        <h2><?php echo $this->__('Artificial Grass Products') ?></h2>
+    </div>
+    <?php if (!($_products = $this->getProductCollection()) && !(count($_products))): ?>
+        <p class="note-msg"><?php echo $this->__('There are no products matching the selection.') ?></p>
+    <?php else: ?>
+    <div id="slideshow-featured-product" class="content-featured-product">        
+        <div class="<?php if(count($_products) <= $_columnCount): ?>none-slider-featured-product<?php else: ?>slideshow-box<?php endif ?>">
+            <?php //if(count($_products) > $_columnCount):?>        
+            <!--div class="navigation">
+    			<?php //$n = ceil($n/$_columnCount)*$_columnCount;?>
+    			<?php //for($j = 0;$j < $n;$j+=$_columnCount):?>
+    			    <a href="#"<?php //if($j == 0) echo ' class="active"';?>><?php //echo $j+1;?></a>
+    			<?php //endfor;?>	
+    		</div-->
+            <?php //endif;?>
+            <ul class="products-list jcarousel-skin-tango" id="featured-product-content">
+            <?php $i=0; foreach ($_products->getItems() as $_product): ?>
+            <?php
+    					//$_product = Mage::getModel('catalog/product')->load($_item->getId());
+            ?>
+                <li class="item<?php echo (++$i == count($_products))?' last':''; ?>">
+                    <?php 
+            			$pId= $_product['entity_id'];									
+            			$product = Mage::getModel('catalog/product')->load($pId);
+        			?> 
+        			<?php Mage::helper('productlabels')->display($product);?>
+                    
+                    <a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true); ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize($w, $h) ?>" width="<?php echo $w ?>" height="<?php echo $h ?>" alt="<?php echo $this->stripTags($_product->getName(), null, true) ?>" /></a>
+                    <div class="product-shop">
+                        <div class="f-fix">
+                            <h3 class="product-name"><a href="<?php echo $_product->getProductUrl() ?>" title="<?php echo $this->stripTags($_product->getName(), null, true) ?>"><?php echo $this->helper('catalog/output')->productAttribute($_product, $_product->getName() , 'name') ?></a></h3>
+                            <div class='decs'><?php echo $_helper->productAttribute($_product, $_product->getShortDescription(), 'short_description') ?></div>          
+                        </div>
+                    </div>
+					<a href="<?php echo $_product->getProductUrl() ?>" class="featured-product-price"><span><span><?php echo $this->__('Only ')."<span class='price-number'>".Mage::helper('core')->currency($_product->getPrice(),true,false)."</span>".$this->__(' per square meter inc VAT');?></span></span></a>                  
+                </li>
+            <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+    <?php endif; ?>    
+</div>
+
+<!--script type="text/javascript">
+	function mycarousel_initCallback(carousel) {
+    jQuery('#slideshow-featured-product .navigation a').bind('click', function() {
+        jQuery('#slideshow-featured-product .navigation a').removeClass('active');
+		jQuery(this).addClass('active');
+		carousel.scroll(jQuery.jcarousel.intval(jQuery(this).text()));
+        return false;
+    });}
+    
+    jQuery(document).ready(function() {
+        jQuery('#slideshow-featured-product .slideshow-box').jcarousel({
+        scroll: 5,
+		initCallback: mycarousel_initCallback,
+		// This tells jCarousel NOT to autobuild prev/next buttons
+		buttonNextHTML: null,
+		buttonPrevHTML: null,			
+		animation:3000,
+        auto:0,
+		wrap: 'circular'
+        });
+    });	
+</script-->

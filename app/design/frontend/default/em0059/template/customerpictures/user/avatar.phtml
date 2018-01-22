@@ -1,0 +1,61 @@
+<?php 
+	if($this->getRequest()->getControllerName()=='index'){
+		if($this->getRequest()->getActionName()=='user')
+			$customer = Mage::getModel('customer/customer')->load($this->getRequest()->getParam('id'));
+		else
+			$customer = Mage::getModel('customer/customer')->load($this->getImage()->getUserId());
+	}
+	else
+		$customer = Mage::getModel('customer/customer')->load(Mage::getSingleton('customer/session')->getId());
+	
+?>
+<div class="user-info">
+	<div class="avatar">
+		<div class="avatar-image" id="customer-avatar" style="background: url('<?php echo $this->getAvatarPath() ?>') top left no-repeat" <?php if($this->getRequest()->getControllerName()!='user'):?>onclick="setLocation('<?php echo $this->getUrl('customerpictures/index/user').'id/'.$customer->getId() ?>')"<?php endif ?>>
+		</div>
+	</div>
+    <br />
+	<h1><?php echo $customer->getName() ?></h1>
+	<?php echo $this->__('Expressgrass Customer Since (%s)', $this->formatDate($customer->getCreatedAt(), 'long')) ?>
+	<ul id="separate-list"></ul>
+</div>
+<?php if($this->getRequest()->getActionName()=='index'): ?>
+<script type="text/javascript">        
+	function createUploader(type, mainId, listId, actionUrl){            
+		var uploader = new qq.FileUploader({
+			element: document.getElementById(mainId),
+			listElement: document.getElementById(listId),
+			action: actionUrl,
+			debug: true,
+			allowedExtensions: ['jpg', 'jpeg', 'png', 'gif'],
+			onSubmit: function(id, fileName){
+				if(type=='avatars'){
+					$(listId).hide();
+				}
+				else{
+					$(listId).show();
+				}
+			},
+			onProgress: function(id, fileName, loaded, total){
+				if(type!='avatars'){
+					text = Math.round(loaded / total * 100);
+					$('qq-upload-size').setStyle({width: text+'%'});
+				}
+			},
+			onComplete: function(id, fileName, responseJSON){
+				if(type=='avatars'){
+					var imageUrl = responseJSON['src'];
+					$(mainId).setStyle({
+						background: "url('"+imageUrl+"') top left no-repeat"
+					});
+					$(listId).hide();
+				}
+				else{
+					window.location = '<?php echo $this->getTempDetailUrl() ?>';
+				}
+			}
+		});           
+	}        
+	window.onload = createUploader('avatars', 'customer-avatar', 'separate-list', '<?php echo $this->getUploadUrl('avatars') ?>');     
+</script>  
+<?php endif ?>

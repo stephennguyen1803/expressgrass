@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<layout>
+    <default>
+		<reference name="head">
+            <action method="addJs"><file>lib/uploader/flow.min.js</file></action>
+            <action method="addJs"><file>lib/uploader/fusty-flow.js</file></action>
+            <action method="addJs"><file>lib/uploader/fusty-flow-factory.js</file></action>
+            <action method="addJs"><file>mage/adminhtml/uploader/instance.js</file></action>
+            <action method="addItem"><type>skin_css</type><name>em_slideshowwidget/slideshowwidget.css</name></action>
+            <action method="addItem"><type>skin_js</type><name>em_slideshowwidget/slideshowwidget.js</name></action>
+		</reference>
+	</default>
+	<adminhtml_widget_instance_edit>
+		<update handle="editor"/>
+		<block name="additional_scripts" type="core/template" template="cms/browser/content/uploader.phtml"/>
+	</adminhtml_widget_instance_edit>
+</layout>

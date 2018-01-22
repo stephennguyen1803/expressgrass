@@ -1,0 +1,214 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<?php $metaTitle = $this->getTitle(); ?>
+<?php $metaDescription = htmlspecialchars($this->getDescription()) ?>
+<title><?php if(!empty($metaTitle)){echo $metaTitle;}else{echo "Artificial Grass, Fake Lawn & Astro Turf | Express Grass"; } ?></title>
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<meta name="robots" content="NOODP,NOYDIR" />
+<meta name="description" content="<?php if(!empty($metaDescription)){echo $metaDescription;}else{echo "Affordable synthetic & artificial grass, fake lawn, astro turf, putting greens & installation tools. We also offer overnight delivery throughout the UK!"; } ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="Publisher" href="https://plus.google.com/108342424383560347076"/>
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
+
+<?php /* Open Graph Protocol for Facebook and SEO START */ ?>
+<?php if(Mage::registry('current_product')): ?>
+ <?php $product = Mage::registry('current_product'); ?>
+ <meta property="og:title" content="<?php echo ($product->getName()); ?>" />
+ <meta property="og:type" content="product" />
+ <meta property="og:image" content="<?php echo $this->helper('catalog/image')->init($product, 'small_image')->resize(200,200);?>" />
+ <meta property="og:url" content="<?php echo Mage::registry('product')->getProductUrl(); ?>" />
+ <meta property="og:description" content="<?php echo strip_tags(($product->getShortDescription())); ?>" />
+ <meta property="og:site_name" content="<?php echo Mage::app()->getStore()->getFrontEndName(); ?>" />
+ <meta property="fb:page_id" content="http://www.facebook.com/expressgrass/156496737738802" />
+<meta property="fb:admins" content="520398021" />
+<?php elseif(Mage::registry('current_category')): ?>
+ <meta property="og:title" content="<?php echo $this->getTitle() ?>" />
+ <meta property="og:type" content="product.group" />
+ <meta property="og:url" content="<?php echo $this->helper('core/url')->getCurrentUrl();?>" />
+ <meta property="og:description" content="<?php echo strip_tags($this->getDescription()) ?>" />
+ <meta property="og:site_name" content="<?php echo Mage::app()->getStore()->getFrontEndName(); ?>" />
+ <meta property="fb:page_id" content="http://www.facebook.com/expressgrass/156496737738802" />
+<meta property="fb:admins" content="520398021" />
+<?php elseif((Mage::getSingleton('cms/page')->getIdentifier() == 'em0059_home' &&
+ Mage::app()->getFrontController()->getRequest()->getRouteName() == 'cms')) : ?>
+ <meta property="og:title" content="Artificial Grass, Fake Lawn & Astro Turf | Express Grass" />
+ <meta property="og:type" content="website" />
+ <meta property="og:image" content="http://www.expressgrass.com/media/facebooklogo300x300.jpg" />
+ <meta property="og:url" content="<?php echo $this->helper('core/url')->getCurrentUrl();?>" />
+ <meta property="og:description" content="Affordable synthetic & artificial grass, fake lawn, astro turf, putting greens & installation tools. We also offer overnight delivery throughout the UK!" />
+ <meta property="og:site_name" content="Expressgrass.com" />
+<meta property="fb:page_id" content="http://www.facebook.com/expressgrass/156496737738802" />
+<meta property="fb:admins" content="520398021" />
+<?php else: ?>
+ <meta property="og:title" content="<?php echo $this->getTitle() ?>" />
+ <meta property="og:type" content="article" />
+  <meta property="og:image" content="http://www.expressgrass.com/media/facebooklogo300x300.jpg" />
+ <meta property="og:url" content="<?php echo $this->helper('core/url')->getCurrentUrl();?>" />
+ <meta property="og:description" content="Affordable synthetic & artificial grass, fake lawn, astro turf, putting greens & installation tools. We also offer overnight delivery throughout the UK!" />
+ <meta property="og:site_name" content="<?php echo Mage::app()->getStore()->getFrontEndName(); ?>" />
+<meta property="fb:admins" content="520398021" />
+<?php endif; ?>
+<?php /* Open Graph Protocol for Facebook and SEO END */ ?>
+
+
+
+<!-- Facebook Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1586347921595964');
+fbq('track', "PageView");</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1586347921595964&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+
+
+<script type="text/javascript">
+//<![CDATA[
+	var urlSkinsite='<?php echo $this->getSKinUrl(); ?>';
+//]]>
+</script>
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+<script type="text/javascript">
+jQuery(function($) {
+
+ $('#topcartlink')
+ .bind('mouseover', showCart)
+ .bind('click', showCart)
+ .bind('mouseout', hideCart);
+ $('#block-cart')
+ .bind('mouseover', showCart)
+ .bind('click', showCart)
+ .bind('mouseout', hideCart);
+ var timeout = null;
+ 
+	function hideCart() {
+		if (timeout)
+		clearTimeout(timeout);
+		timeout = setTimeout(function() {
+		timeout = null;
+		$('#block-cart').slideUp();
+		$('#topcartlink').removeClass('over');
+		}, 200);
+	}
+
+	function showCart() {				
+		if (timeout)
+		clearTimeout(timeout);
+		timeout = setTimeout(function() {
+		timeout = null;
+		$('#block-cart').slideDown();
+		$('#topcartlink').addClass('over');
+		}, 200);
+	} 
+
+}); 
+
+</script>
+
+
+
+
+
+
+
+
+
+<!--Responsivenes-->
+
+	<link rel="stylesheet" type="text/css" href="<?php echo $this->getSKinUrl() ?>css/responsive.css" media="all" />
+	<meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, user-scalable=0">
+
+	<?php if(($this->getSKinUrl() == 'http://www.expressgrass.com/skin/frontend/default/accessories_no_qty_box/') || ($this->getSKinUrl() == 'http://www.expressgrass.com/skin/frontend/default/clearance/')){ ?>
+	<script type="text/javascript" src="/skin/frontend/default/em0059/js/selectUl.js"></script>
+	<script type="text/javascript" src="/js/em/jquery.hoverIntent.js"></script>
+	<?php } ?>
+
+	<script type="text/javascript">
+
+	jQuery(document).ready(function() {
+		jQuery('.respbtn').click(function () {
+			jQuery('.header-content .menu').toggleClass('toggled-on')
+		});
+	});
+
+	jQuery(window).load(function () {
+		RespCategoryProducts();
+	});
+	
+	jQuery(window).resize(function () {
+		RespCategoryProducts();
+	});
+	
+	jQuery( document ).ajaxComplete(function() {
+		RespCategoryProducts();
+		jQuery(window).scrollTop(200);
+	});
+	
+	function RespCategoryProducts(){
+		if(jQuery( window ).width() < 1000){
+			var SMGResp_max_height = 0;
+			jQuery('.em-widget-featured-products-grid li.item').css( "height", '100%' );
+			jQuery('.em-widget-featured-products-grid li.item').each(function() {
+				if( jQuery(this).height() > SMGResp_max_height ){
+					SMGResp_max_height = jQuery(this).height();
+				}		
+			});
+			jQuery('.em-widget-featured-products-grid li.item').css( "min-height", SMGResp_max_height+'px' );
+		}
+	}
+	</script>
+	<script type="text/javascript">
+	jQuery( document ).ready(function() {
+		jQuery('#onestepcheckout-place-order').click(function () {
+			if(jQuery( window ).width() < 700){
+				var smgrespoffset = String(jQuery(window).scrollTop());
+				jQuery("<style type='text/css'> .onestepcheckout-index-index div#paypaliframe_wrapper{top:" + smgrespoffset + "px!important;}</style>").appendTo("head");
+			}
+		});
+	});
+	</script>
+	<!--h-->

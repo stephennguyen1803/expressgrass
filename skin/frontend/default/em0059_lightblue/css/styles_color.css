@@ -1,0 +1,107 @@
+/*Menu*/
+.menu li.submenu:hover,
+#nav li.submenu:hover{background:#04c4b5;}
+/*Slideshow Feature*/
+.featured-product-home .navigation  a{background:url("../images/fs.png") no-repeat;}
+.featured-product-home .navigation  a.active{background:url("../images/fs_active.png") no-repeat;}
+.content-featured-product .products-list .product-name a,
+.tab_content .jcarousel-item .product-name a,
+.editor-pick-home .product-name a{color:#04c4b5;}
+.div_link-cart a.top-link-cart{background:url("../images/i_bag.png") no-repeat 0 2px;}
+.div_link-cart{background:url("../images/bg_cart.png") no-repeat scroll 0 0 transparent;}
+.div_link-cart .div_link-cart_inner{background:url("../images/bg_cart.png") no-repeat scroll right -40px transparent;}
+.inner-text a{color:#04c4b5;}
+.inner-text a span{color:#04c4b5;background:url("../images/view_more.png") no-repeat right center;}
+.footer-blog .desc a{color:#04c4b5;background:url("../images/view_more.png") no-repeat right center;}
+.form-language li.selected a{color:#04c4b5;}
+.form-language li a:hover{color:#04c4b5;}
+.block .product-name a {color:#04c4b5;}
+.box-recent .data-table  tbody tr td.last span a,
+#my-orders-table tbody tr td.last span a{color:#04c4b5;}
+.dashboard .col2-set .box .box-title h3{color:#04c4b5;}
+.dashboard .box-info h4 {color:#04c4b5;}
+.box-account .box-title a{background:#04c4b5;}
+#my_recent_tags .tags  ul li a{color:#04c4b5;}
+.dashboard .box-tags .tags li a{}
+.ui-tabs .ui-tabs-nav li.tab-items  a:hover{color:#04c4b5;}
+
+/*Category*/
+.page-title h1,
+.page-title h2 {color:#04c4b5;}
+.product-name a{color:#04c4b5;}
+.block .block-title strong span {color:#04c4b5;}
+.pager .pages li:hover a,
+.lasted-review .block-title strong span{color:#04c4b5;}
+.rating-box{background:url(../images/bkg_rating.png) 0 0 repeat-x;}
+.rating-box .rating{background:url(../images/bkg_rating.png) 0 100% repeat-x; }
+
+
+/*Details-Compare*/
+.product-view .product-shop .product-name h1,
+.catalog-product-compare-index .page-title h1,
+.page-popup .link-print,
+.compare-table  th .nobr{color:#04c4b5;}
+
+/*Login*/
+.account-login .content h2,
+.account-create .fieldset .legend.login_info {color:#04c4b5;}
+
+/*Shoping Cart*/
+.data-table.cart-table th,
+.box-recent  .data-table th,
+.sales-order-history  .data-table th,
+.data-table.cart-table a.edit,
+.cart .totals tfoot td strong,
+.cart .totals tfoot td strong .price{color:#04c4b5;}
+
+/*Checkout*/
+.opc-col .step-title h2,
+.opc-col .step-title .number,
+.checkout-onepage-success .sub-title{color:#04c4b5 !important;}
+.opc .allow.active .step-title {background:#04c4b5;}
+.block-progress dt.complete,
+.block-progress dt.complete a,
+.opc #checkout-step-review .data-table thead th,
+.opc #checkout-step-review .data-table  tfoot strong,
+.opc #checkout-step-review .data-table  tfoot tr.last .price{color:#04c4b5;}
+.block-progress .separator{background:url(../images/progress.png) no-repeat 0 3px;}
+
+.data-table thead th {background:#cef1ee;}
+.totals button.button.btn-checkout span {background:url("../images/btn_checkout.png") no-repeat 0 0 !important;}
+.totals button.button.btn-checkout span span{background:url("../images/btn_checkout.png") no-repeat right -41px !important;}
+
+/*My Account*/
+.col-1.addresses-primary h2,
+.addresses-list h3,
+.addresses-list h2,
+.block-account .block-content li.current  strong,
+.block-account .block-content li a:hover,
+.box-recent  .data-table th,
+.sales-order-history  .data-table  th{color:#04c4b5;}
+.box-account .box-head a,
+.addresses-list p.edit a{background:#04c4b5;}
+.box-recent .data-table  tbody tr  td.last span.separator,
+#my-orders-table tbody tr  td.last span.separator{background:url(../images/progress.png) no-repeat 0 3px;}
+
+/*Blog*/
+.em_block-recent-post span.buy_extension{color:#04c4b5;}
+.em_blog-cat li a:hover{color:#04c4b5;}
+.em_block-recent-post .post-on span{color:#04c4b5;}
+.em_block-tag-cloud .block-content .actions a{color:#04c4b5;}
+.em_block-recent-comments .comment-by  span{color:#04c4b5;}
+.post-title  h2 a{color:#04c4b5;}
+.comment-count a,
+.post-footer span.post-by span{color:#04c4b5;}
+.comment-item span.comment-by span{color:#04c4b5;}
+.post-details .comment-count span,
+.em_post-items .title-blog,.post-details .title-blog{color:#04c4b5;}
+
+.em_block-recent-post .block-title strong{background:url(../images/i_recent_post.png) no-repeat left 7px;}
+.em_block-tag-cloud .block-title strong{background:url(../images/i_tag_cloud.png) no-repeat left 7px;}
+.em_block-recent-comments .block-title strong{background:url(../images/i_recent_comment.png) no-repeat left 7px;}
+
+.product-view .product-shop .in-stock{background:url(../images/i_stock.png) 0 0 no-repeat;}
+.view-mode .grid, .view-mode .list {background: url("../images/viewas.png") 0 0  no-repeat;}
+.pager .pages li.current{background:url(../images/bg_page_current.png) 0 0 no-repeat;}
+
+

@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ *  
+ *
+ * @package     EM_SlideshowWidget
+ * @copyright   Copyright (c) 2009 Quick Solution LT
+ * 
+ */
+-->
+<widgets>
+    <productsbycategory type="productsbycategory/productsbycategory" translate="name description" module="productsbycategory">
+        <name>Products By Category</name>
+        <description>Load Products By Category</description>
+        <parameters>
+			<label>
+				<label>Label</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+			</label>		
+			<category>
+				<label>Select category</label>
+                <visible>1</visible>
+                <required>1</required>
+                <type>select</type>
+				<source_model>productsbycategory/categorytree</source_model>
+			</category>
+			<number_product>
+				<label>Number Products</label>
+				<visible>1</visible>
+                <required>1</required>
+                <type>text</type>
+			</number_product>
+        </parameters>
+    </productsbycategory>
+</widgets>

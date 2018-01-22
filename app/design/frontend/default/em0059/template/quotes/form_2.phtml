@@ -1,0 +1,137 @@
+
+<div class="callback grass">
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="page-head title-grass">
+    <h3><?php echo Mage::helper('quotes')->__('Terrace Outdoor Carpet Sample Request') ?></h3>
+</div>
+<form action="<?php echo Mage::getUrl('quotes/index/post') ?>" id="quoteForm" method="post">
+<!--id of email -->
+<input type="text" name="id" style="display:none" value="2" />
+<!--------------->
+<table style="width: 559px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+
+<tr valign="TOP">
+
+<td colspan="4" height="65">
+<p><span class="style17">For more information and to request a sample of our Terrace Outdoor Carpet please complete the form below. (Please complete all <strong>Bold </strong>fields)</span></p>
+</td>
+</tr>
+<tr>
+
+<!--id of email -->
+
+
+
+<!--------------->
+<td valign="MIDDLE" width="90" height="25">
+<p><span class="style16" style="font-weight: bold;">Name</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input  type="text" name="name" id="name" onblur="this.value=this.value.toUpperCase()" size="37" class="required-entry"/></p>
+<div id="sample_terrace_Name_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="25">
+<p><span class="style16" style="font-weight: bold;">Address</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input  type="text" name="address1" onblur="this.value=this.value.toUpperCase()" size="37" class="required-entry" /></p>
+<div id="sample_terrace_Address_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td height="48">&nbsp;</td>
+<td colspan="3" valign="top">
+<p><input  type="text" name="address2" onblur="this.value=this.value.toUpperCase()" size="37" /></p>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="48">
+<p>&nbsp;</p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input  type="text" name="address3" onblur="this.value=this.value.toUpperCase()" size="37" /></p>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="25">
+<p><span class="style16" style="font-weight: bold;">Postcode</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input  type="text" name="postcode" onblur="this.value=this.value.toUpperCase()" size="20" class="required-entry"/></p>
+<div id="sample_terrace_Postcode_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="48">
+<p><span class="style16">Tel</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input type="text" name="tel" size="20" /></p>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="26">
+<p><span class="style16" style="font-weight: bold;">Email</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input type="text" name="email" size="37" class="required-entry input-text validate-email"/></p>
+<div id="sample_terrace_email_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td valign="TOP" height="46">
+<p><span class="style16" style="font-weight: bold;"> How did you hear about us? </span></p>
+</td>
+<td colspan="3" valign="top"><input id="How_did_you_hear_about_us" type="text" name="infor-from" size="37" />
+<div id="sample_terrace_How_did_you_hear_about_us_errorloc" class="error_strings">&nbsp;</div>
+<br /> <span class="style17">Please state which search engine used</span></td>
+</tr>
+
+<tr>
+<td valign="MIDDLE" height="57">
+<p><span class="style16"> Colour Required</span></p>
+</td>
+<td><p> <select name="send-to"> <option selected="selected" value="NO COLOUR SELECTED">Select</option> <option value="BE">Terrace Beige 0200</option> <option value="BF">Terrace Brown Flec 0302</option> <option value="AN">Terrace Anthracite 0900</option> <option value="DG">Terrace Dark Green 0630</option> <option value="LB">Terrace Light Blue 0800</option> <option value="GM">Terrace Grey Mix 0901</option> </select></p></td>
+</tr>
+
+<tr>
+<td  valign="MIDDLE" height="48">
+<p><span class="style16">To be used for </span></p>
+</td>
+<td valign="top" colspan="3" ><span class="style17"> <input type="text" name="used" size="37" class="required-entry"/> </span></td>
+</tr>
+<tr>
+<td  valign="TOP" height="130">
+<p><span class="style16">Enquiry</span></p>
+</td>
+<td valign="TOP">
+<p><textarea name="enquiry" rows="5" cols="37" class="required-entry"></textarea></p>
+</td>
+</tr>
+<tr>
+<td colspan="1" valign="TOP" height="30"></td>
+<td valign="TOP">
+<p><input type="hidden" name="subject" value="Terrace Outdoor Carpet Sample Request" /><input  style="cursor:pointer" type="SUBMIT" value="Submit" /></p>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="MIDDLE" height="30">
+<p><span class="style17"><br /> <br /> </span></p>
+</td>
+</tr>
+<tr>
+<td height="1">&nbsp;</td>
+<td width="12">&nbsp;</td>
+<td width="8">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</form>
+<script type="text/javascript">
+    var quoteForm = new VarienForm('quoteForm', true);
+</script>
+</div>

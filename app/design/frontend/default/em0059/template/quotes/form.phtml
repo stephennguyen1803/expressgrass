@@ -1,0 +1,141 @@
+
+<div class="callback grass">
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div class="page-head title-grass">
+    <h3><?php echo Mage::helper('quotes')->__('Artificial Grass Sample Request') ?></h3>
+</div>
+<form action="<?php echo Mage::getUrl('quotes/index/post') ?>" id="quoteForm" method="post">
+<!--id of email -->
+<input type="text" name="id" style="display:none" value="1" />
+<!--------------->
+<table style="width: 559px;" border="0" cellspacing="0" cellpadding="0">
+<tbody>
+
+<tr valign="TOP">
+
+<td colspan="4" height="65">
+<p><span class="style17">For more information and to request a sample of our Artificial Grass products please complete the form below. (Please complete all <strong>Bold </strong>fields)<br />
+  <br />
+This Sample Pack Will Contain:<br />
+<strong>Budget - Classic - Ewood - Ashton - Deepdale - Oakwell - Selhurst</strong></span></p>
+<p><span class="style17"><br />
+</span></p>
+</td>
+
+</tr>
+<tr>
+<td valign="MIDDLE" width="90" height="25">
+<p><span class="style16" style="font-weight: bold;">Name</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input  type="text" name="name" id="name" onblur="this.value=this.value.toUpperCase()" size="37" class="required-entry" /></p>
+<div id="sample_terrace_Name_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="25">
+<p><span class="style16" style="font-weight: bold;">Address</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input  type="text" name="address1" onblur="this.value=this.value.toUpperCase()" class="required-entry" size="37"  /></p>
+<div id="sample_terrace_Address_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td height="48">&nbsp;</td>
+<td colspan="3" valign="top">
+<p><input  type="text" name="address2" onblur="this.value=this.value.toUpperCase()" size="37" /></p>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="48">
+<p>&nbsp;</p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input  type="text" name="address3" onblur="this.value=this.value.toUpperCase()" size="37" /></p>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="25">
+<p><span class="style16" style="font-weight: bold;">Postcode</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input  type="text" name="postcode" onblur="this.value=this.value.toUpperCase()" size="20" class="required-entry"/></p>
+<div id="sample_terrace_Postcode_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="48">
+<p><span class="style16">Tel</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input type="text" name="tel" size="20"/></p>
+</td>
+</tr>
+<tr>
+<td valign="MIDDLE" height="26">
+<p><span class="style16" style="font-weight: bold;">Email</span></p>
+</td>
+<td colspan="3" valign="MIDDLE">
+<p><input type="text" name="email" size="37" class="required-entry input-text validate-email"/></p>
+<div id="sample_terrace_email_errorloc" class="error_strings">&nbsp;</div>
+</td>
+</tr>
+<tr>
+
+<td valign="TOP" height="46">
+<p><span class="style16" style="font-weight: bold;"> How did you hear about us? </span></p>
+</td>
+<td colspan="3" valign="top"><input id="How_did_you_hear_about_us" type="text" name="infor-from" size="37" />
+<div id="sample_terrace_How_did_you_hear_about_us_errorloc" class="error_strings">&nbsp;</div>
+<br /> <span class="style17">Please state which search engine used</span></td>
+</tr>
+<tr> 
+              <td valign="MIDDLE" height="48" colspan="4"><p><br>
+                  <span class="style17">"Lowest Price Promise" In the unlikely 
+                  event that you are quoted a cheaper price for a similar quality 
+                  of artificial grass please don't hesitate to let us know. We 
+                  aim to maintain our position of being the cheapest source of 
+                  quality artificial grass available to buy direct online.</span></p>
+                <p>&nbsp;</p>
+                </td>
+            </tr>
+<!--<tr>
+<td colspan="3" valign="MIDDLE" height="25">
+<p><span class="style17">To be used for </span></p>
+</td>
+<td valign="top" width="432"><span class="style16"> <input type="text" name="To be used for" size="37" /> </span></td>
+</tr>-->
+<!--
+<tr>
+<td colspan="3" valign="TOP" height="113">
+<p><span class="style17">Enquiry</span></p>
+</td>
+<td valign="TOP">
+<p><textarea name="enquiry" rows="5" cols="37"></textarea></p>
+</td>
+</tr>-->
+<tr>
+<td colspan="3" valign="TOP" height="30"><img src="../resources/_clear.gif" alt="" width="1" height="1" border="0" /></td>
+<td  valign="TOP">
+<p><input   type="hidden" name="subject" value="Terrace Outdoor Carpet Sample Request" /><input style="cursor:pointer" type="SUBMIT" value="Submit" /></p>
+</td>
+</tr>
+<tr>
+<td colspan="4" valign="MIDDLE" height="30">
+<p><span class="style17"><br /> <br /> </span></p>
+</td>
+</tr>
+<tr>
+<td height="1">&nbsp;</td>
+<td width="12">&nbsp;</td>
+<td width="8">&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+</form>
+<script type="text/javascript">
+    var quoteForm = new VarienForm('quoteForm', true);
+</script>
+</div>

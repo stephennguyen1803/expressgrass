@@ -1,0 +1,486 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    Mage
+ * @package     Mage_Reports
+ * @copyright   Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <sections>
+        <em0059 translate="label" module="em0059settings">
+            <label>EM0059 Valis Settings</label>
+            <tab>general</tab>
+            <frontend_type>text</frontend_type>		
+			<frontend_model>em0059settings/adminhtml_system_config_form</frontend_model>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+			 <groups>
+				<image_category translate="label">					
+                    <label>Image on Category Page</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					<fields>
+                        <grid_thumb_width translate="label">
+                            <label>Thumbnail Width on Category page in Grid mode </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </grid_thumb_width>
+                        <grid_thumb_height translate="label comment">
+                            <label>Thumbnail Height on Category page in Grid mode</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </grid_thumb_height>
+                        <listing_thumb_width translate="label comment">
+                            <label>Thumbnail Width on Category page in List mode</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </listing_thumb_width>
+						<listing_thumb_height translate="label">
+                            <label>Thumnail Height on Category page in List mode </label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </listing_thumb_height>
+					</fields>
+				</image_category>
+                <image_product translate="label">					
+                    <label>Image on Product Detail Page</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<base_image_width translate="label">
+                            <label>Image Width on Product detail page</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </base_image_width>
+                        <base_image_height translate="label comment">
+                            <label>Image Height on Product detail page</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </base_image_height>
+                        <thumb_base_width translate="label comment">
+                            <label>Thumbnail Width on Product detail page</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </thumb_base_width>
+						<thumb_base_height translate="label">
+                            <label>Thumbnail Height on Product detail page</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </thumb_base_height>
+					</fields>
+				</image_product>
+				<image_related translate="label">					
+                    <label>Image on Related Block</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>3</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					<fields>
+						<related_width translate="label">
+                            <label>Thumbnail Width on Related block</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </related_width>
+                        <related_height translate="label comment">
+                            <label>Thumnail Height on Related block</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </related_height>
+					</fields>
+				</image_related>
+				<image_crossell translate="label">					
+                    <label>Image on Crossell Block</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>4</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					<fields>
+                        <crosssell_width translate="label comment">
+                            <label>Thumbnail Width on Crossell block</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                           <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </crosssell_width>
+						<crosssell_height translate="label">
+                            <label>Thumbnail Height on Crossell block</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </crosssell_height>
+					</fields>
+				</image_crossell>
+				<image_upsell translate="label">					
+                    <label>Image on Upsell Block</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>5</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					<fields>
+						<upsell_width translate="label">
+                            <label>Thumbnail Width on Upsell block</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                           <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </upsell_width>
+                        <upsell_height translate="label comment">
+                            <label>Thumbnail Height on Upsell block</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </upsell_height>
+					</fields>
+				</image_upsell>
+                
+				<image_featured translate="label">					
+                    <label>Image on Featured Product</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>6</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <featured_width translate="label comment">
+                            <label>Thumbnail Width on Featured Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </featured_width>
+						<featured_height translate="label">
+                            <label>Thumbnail Height on Featured Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </featured_height>
+					</fields>
+				</image_featured>
+                
+                <image_tabs translate="label">					
+                    <label>Image on Tabs Product</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>7</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <tabs_width translate="label comment">
+                            <label>Thumbnail Width on Tabs Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tabs_width>
+						<tabs_height translate="label">
+                            <label>Thumbnail Height on Tabs Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tabs_height>
+					</fields>
+				</image_tabs>
+                
+                <image_editor_pick translate="label">					
+                    <label>Image on Editor's Pick Product</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>8</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <editor_pick_width translate="label comment">
+                            <label>Thumbnail Width on Editor's Pick Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </editor_pick_width>
+						<editor_pick_height translate="label">
+                            <label>Thumbnail Height on Editor's Pick Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </editor_pick_height>
+					</fields>
+				</image_editor_pick>
+                
+                <image_lastest_review translate="label">					
+                    <label>Image on Lastest Reviews Product</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>9</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <lastest_review_width translate="label comment">
+                            <label>Thumbnail Width on Lastest Reviews Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </lastest_review_width>
+						<lastest_review_height translate="label">
+                            <label>Thumbnail Height on Lastest Reviews Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </lastest_review_height>
+					</fields>
+				</image_lastest_review>
+                
+                <image_shopping_cart translate="label">					
+                    <label>Image on Shopping Cart Product</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+                        <shopping_cart_width translate="label comment">
+                            <label>Thumbnail Width on Shopping Cart Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shopping_cart_width>
+						<shopping_cart_height translate="label">
+                            <label>Thumbnail Height on Shopping Cart Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shopping_cart_height>
+					</fields>
+				</image_shopping_cart>
+				
+                <image_background translate="label">					
+                    <label>Thumbnail Background on</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>11</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+					<fields>
+						<grid_thumb_bgcolor translate="label">
+                            <label>Category Page Grid</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                           <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </grid_thumb_bgcolor>
+                        <listing_thumb_bgcolor translate="label comment">
+                            <label>Category Page List</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </listing_thumb_bgcolor>
+						<base_image_bgcolor  translate="label">
+                            <label>Product page</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </base_image_bgcolor>
+                        <thumb_base_bgcolor translate="label comment">
+                            <label>Product page thumbnail</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>4</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </thumb_base_bgcolor>
+						<related_bgcolor translate="label">
+                            <label>Related Block</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>5</sort_order>
+                             <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </related_bgcolor>
+                        <crosssell_bgcolor translate="label comment">
+                            <label>Crossell Block</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>6</sort_order>
+                           <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </crosssell_bgcolor>
+						<upsell_bgcolor translate="label">
+                            <label>Upsell Block</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>7</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </upsell_bgcolor>
+                        <featured_bgcolor translate="label comment">
+                            <label>Featured Product</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>8</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </featured_bgcolor>
+						<tabs_bgcolor translate="label comment">
+                            <label>Tab Produtc</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>9</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tabs_bgcolor>
+                        
+                        <editor_pick_bgcolor translate="label comment">
+                            <label>Editor's Pick Produtc</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>11</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </editor_pick_bgcolor>
+                        
+                        <lastest_review_bgcolor translate="label comment">
+                            <label>Lastest Review Produtc</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>12</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </lastest_review_bgcolor>
+                        
+                        <shopping_cart_bgcolor translate="label comment">
+                            <label>Shopping Cart Produtc</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>13</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shopping_cart_bgcolor>
+					</fields>
+				</image_background>
+                
+				<column_count translate="label">					
+                    <label>Product Columns</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>12</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+					<fields>
+						<cat_one_column translate="label comment">
+                            <label>One column layout</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cat_one_column>
+						<cat_two_columns translate="label comment">
+                            <label>Two columns layout</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>2</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cat_two_columns>
+						<cat_three_columns translate="label comment">
+                            <label>Three columns layout</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </cat_three_columns>
+					</fields>
+				</column_count>
+	
+            </groups>
+        </em0059>
+    </sections>
+</config>

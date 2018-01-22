@@ -1,0 +1,68 @@
+<div class="home-accessories">
+	<div class="widget-title">
+        <h2><?php echo $label ?></h2>
+    </div>
+	<?php
+	$collection = Mage::getModel('catalog/product')
+								 ->getCollection()
+								 ->setPageSize($limit)
+								 ->joinField('category_id', 'catalog/category_product', 'category_id', 'product_id = entity_id', null, 'left')
+								 ->addAttributeToSelect('*')
+								 ->addAttributeToFilter('category_id', array($category_id));							
+	?>
+	<?php $_collectionSize = $collection->count() ?>
+	<div id='products-by-category'>
+	<ul class="products-grid">
+	<?php foreach ($collection as $product): ?>
+			<?php
+				$product = Mage::getModel('catalog/product')->load($product->getId());
+			?>
+			<li class="item">
+				<a href="<?php echo $product->getProductUrl()?>" title="<?php echo $product->getName()?>">
+					<img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(135, 135); ?>" alt="<?php echo $product->getName()?>" border="0" />
+				</a>
+				<h3 class="product-name"><a href="<?php echo $product->getProductUrl()?>" title="<?php echo $product->getName()?>"><?php echo $product->getName() ?></a></h3>
+				<?php
+				$storeId    = Mage::app()->getStore()->getId();
+				$summaryData = Mage::getModel('review/review_summary')
+				   ->setStoreId($storeId)
+				   ->load($product->getId());
+				   if($summaryData->getRatingSummary()){
+				   
+				   ?>
+				   <div class="rating-box">
+						<div class="rating" style="width: <?php echo $summaryData->getRatingSummary().'%'; ?>"></div>
+				   </div>
+				   <span class="rating-text"><?php echo $summaryData->getReviewsCount()." ";echo $this->__('Review(s)');?></span>
+				   <?php 
+				   }
+				?>
+				<div class="price-box">
+					<span class="price"><?php echo Mage::helper('core')->currency($product->getPrice(),true,false);?></span>
+				</div>
+				<div class="actions">
+					<?php if($product->isSaleable()): ?>
+						<button class="button" onclick="setLocation('<?php echo Mage::getUrl('checkout/cart/add/')?>product/<?php echo $product->getId() ?>/')" title="<?php echo $this->__('Köp');?>" type="submit"><span><span><?php echo $this->__('Köp');?></span></span></button>
+					<?php else: ?>
+						<p class="availability out-of-stock"><span><?php echo $this->__('Out of stock') ?></span></p>
+					<?php endif; ?>
+				</div>
+			</li>
+	<?php endforeach ?>	
+	</ul>
+	</div>
+</div>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('#products-by-category').jcarousel({
+        scroll: 5,
+		//initCallback: mycarousel_initCallback,
+		// This tells jCarousel NOT to autobuild prev/next buttons
+		// buttonNextHTML: null,
+		// buttonPrevHTML: null,			
+		animation:3000,
+        auto:0,
+		wrap: 'circular'
+        });
+    });	
+</script>

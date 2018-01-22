@@ -1,0 +1,56 @@
+<?php if ($this->getIsNeedToDisplaySideBar()):?>
+<div class="block block-cart" id="block-cart" style="display:none">
+    <?php $_cartQty = $this->getSummaryCount() ?>   
+    <div class="block-content">
+		
+   
+		<?php $_items = $this->getRecentItems() ?>
+		<?php if(count($_items)): ?>		
+			<ol id="cart-sidebar" class="mini-products-list">
+			<?php foreach($_items as $_item): ?>
+				<?php echo $this->getItemHtml($_item) ?>
+			<?php endforeach; ?>
+			</ol>
+			<script type="text/javascript">decorateList('cart-sidebar', 'none-recursive')</script>
+		<?php else: ?>
+			<p class="empty"><?php echo $this->__('You have no items in your shopping cart.') ?></p>
+		<?php endif ?>
+		<div class="sub-sum">
+		<?php if ($_cartQty>0): ?>
+			<p class="subtotal">
+				<?php if ($this->canApplyMsrp()): ?>
+					<span class="map-cart-sidebar-total"><?php echo $this->__('ORDER TOTAL WILL BE DISPLAYED BEFORE YOU SUBMIT THE ORDER'); ?></span>
+				<?php else: ?>
+					<?php
+if (Mage::app()->getRequest()->getControllerName()=='multishipping_address') {
+$quote = Mage::getSingleton('checkout/cart')->getQuote();
+$quote->collectTotals();
+$quote->getShippingAddress()->collectTotals();
+}
+?>
+					<?php echo Mage::helper('checkout')->formatPrice($this->getSubtotal()) ?>
+					<?php if ($_subtotalInclTax = $this->getSubtotalInclTax()): ?>
+						<br />(<?php echo Mage::helper('checkout')->formatPrice($_subtotalInclTax) ?> <?php echo Mage::helper('tax')->getIncExcText(true) ?>)
+					<?php endif; ?>
+				<?php endif; ?>
+			</p>
+		<?php endif ?>
+		<?php if ($_cartQty>0): ?>
+			<div class="summary">
+				<?php if ($_cartQty==1): ?>
+					<p class="amount"><?php echo $this->__('<a href="%s">1 item</a>', $this->getUrl('checkout/cart')) ?></p>
+				<?php else: ?>
+					<p class="amount"><?php echo $this->__('<a href="%s">%s items</a>', $this->getUrl('checkout/cart'), $_cartQty) ?></p>
+				<?php endif ?>            
+			</div>
+		<?php endif ?>
+		</div>
+		 <?php if($_cartQty && $this->isPossibleOnepageCheckout()): ?>
+			<div class="actions">
+				<?php echo $this->getChildHtml('extra_actions') ?>
+				<button type="button" title="<?php echo $this->__('Checkout') ?>" class="button" onclick="setLocation('<?php echo $this->getCheckoutUrl() ?>')"><span><span><?php echo $this->__('Checkout') ?></span></span></button>
+			</div>
+		<?php endif ?>
+    </div>
+</div>
+<?php endif;?>

@@ -1,0 +1,63 @@
+<?php
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<?php
+    $image = new EM_Em0059settings_Em0059settings();
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+	$bg_image = $image->get_base_image_bgcolor();
+	$w_image = $image->get_base_image_width();
+	/*$h_image = $image->get_base_image_height(); */
+	$bg_thumb = $image->get_thumb_base_bgcolor();
+	$w_thumb = $image->get_thumb_base_width();
+	$h_thumb = $image->get_thumb_base_height();	
+	
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+<p class="product-image">
+	<a rel="lightbox[em_lightbox]"  href="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($w_image); ?>"  title="<?php echo $this->htmlEscape($this->getImageLabel())?>">
+    <?php
+        $_img = '<img id="image"  background-color:'.$bg_image.'" src="'.$this->helper('catalog/image')->init($_product, 'image').'" width="'.$w_image.'" alt="'.$this->htmlEscape($this->getImageLabel()).'" title="'.$this->htmlEscape($this->getImageLabel()).'" />';
+        echo $_helper->productAttribute($_product, $_img, 'image');
+    ?>
+	</a>
+</p>
+<?php if (count($this->getGalleryImages()) > 0): ?>
+<div class="more-views">
+	<p class="title-moreview"><?php echo $this->__('More view')?></p>
+    <div id="slideshow_moreviews" class="slideshow slideshow_moreviews">
+        <div class="<?php if(count($this->getGalleryImages()) <= 3): ?>none-slider-moreview<?php else:?>slideshow-box<?php endif ?>">
+            <ul class="jcarousel-skin-tango">
+                <?php foreach ($this->getGalleryImages() as $_image): ?>
+                    <li>
+						<a rel="lightbox[em_lightbox]"  href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'image', $_image->getFile())->resize($w_image); ?>"  title="<?php echo $this->htmlEscape($_image->getLabel()) ?>">
+							<img style="background-color:<?php echo $bg_thumb; ?>" src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->keepFrame(false)->resize($w_thumb,$h_thumb); ?>" width="<?php echo $w_thumb ?>" height="<?php echo $h_thumb ?>" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
+						</a>
+					</li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    </div>
+    <?php if(count($this->getGalleryImages())>0): ?>
+		<script type="text/javascript">
+            jQuery(document).ready(function() {
+                jQuery('#slideshow_moreviews > div.slideshow-box > ul').jcarousel({
+                wrap: 'circular',
+            auto:0,
+            buttonNextHTML:'<a class="next" href="javascript:void(0);" title="Next">Next</a>',
+            buttonPrevHTML:'<a class="previous" href="javascript:void(0);" title="Previous">Pre</a>',
+            scroll:1,
+            animation:'slow'
+                });
+            });
+        </script> 
+	<?php endif; ?>
+</div>
+<?php endif; ?>

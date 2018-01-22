@@ -1,0 +1,58 @@
+<?php
+    $thumnailWidth = 65; 
+    $thumnailHeight = 70;
+    $helper = Mage::helper('cms');
+    $processor = $helper->getBlockTemplateProcessor();
+?>
+<?php if(Mage::getStoreConfig('blog/menu/show_recent_post')):?>
+<div id="slideshow-blog" class="block em_block-recent-post">
+    <div class="block-title">
+        <a href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK).'blog'; ?>" title="<?php echo $this->__("FROM OUR BLOG")?>"><strong><span><?php echo $this->__('From our blog'); ?></span></strong></a>
+    </div>  
+	<div class="slideshow-box">
+        <ul class="jcarousel-skin-tango">
+            <?php foreach ($this->getRecentPost() as $p): ?>
+                <li class="item-blog">
+    				<?php 
+                        $url	=	Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_LINK).'blog/'.$p->getPostIdentifier().'.html';
+                    ?>
+    				<?php if($p->getImage()):?>
+    					<a href="<?php echo $url;?>">
+    						<img src="<?php echo Mage::helper('blog')->resizeImage($p->getImage(),$thumnailWidth,$thumnailHeight,"emblog/posts",'thumbnail');?>" alt=""/>
+    					</a>
+    				<?php endif;?>
+                    
+                    <?php
+                        $title = $p->getTitle();
+                        if(strlen($title)>50) { //dem ki tu chuoi $str, 10o la chieu dai muon quy dinh
+    						$strCutTitle = substr($title, 0, 50); //cat 100 ki tu dau
+    						$title = substr($strCutTitle, 0, strrpos($strCutTitle, ' '));
+    						}
+                    ?>    				
+                    <a class="post-title" href="<?php echo $url?>" ><?php echo $title ?></a>
+                    <?php 
+                        $quick_view = $p->getPostIntro();
+                        if(strlen($quick_view)>150) { //dem ki tu chuoi $str, 10o la chieu dai muon quy dinh
+    						$strCut = substr($quick_view, 0, 150); //cat 100 ki tu dau
+    						$quick_view = substr($strCut, 0, strrpos($strCut, ' '));
+    						}
+                    ?> 
+                    <div class="desc"><?php echo $quick_view ?><?php echo $this->__('...')?><a title="<?php echo $this->__('View More')?>" href="<?php echo $url;?>"><?php echo $this->__('View More')?></a></div>                    	                    
+                </li>
+            <?php endforeach; ?>
+        </ul>
+	</div>
+</div>
+<?php endif;?>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        jQuery('#slideshow-blog > div.slideshow-box > ul').jcarousel({
+        wrap: 'circular',
+    auto:0,
+    buttonNextHTML:'<a class="next" href="javascript:void(0);" title="Next">Next</a>',
+    buttonPrevHTML:'<a class="previous" href="javascript:void(0);" title="Previous">Pre</a>',
+    scroll:1,
+    animation:'slow'
+        });
+    });
+</script>
