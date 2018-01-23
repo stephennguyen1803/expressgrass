@@ -3090,4 +3090,136 @@ body.quickshop-index-view .quickshop-main .product-view .product-shop { float:le
 .toolbar-switch .your-country{float:left; color:#fff; }
 .store-switcher{width: 150px; line-height:30px; }
 
-
+/*NEW CUSTOM 23-1-17*/
+/********************/
+/********************/
+.header-container{
+	background-image:url(../images/body-bg.jpg);
+	background-repeat:repeat;
+}
+.header-container .header{
+	max-width:1180px
+}
+.header_row1{
+	display: flex;
+    height: auto;	
+}
+.header_row1 .col-left{
+	margin-top:0
+}
+.header_row1 .col-right{
+	margin-left:auto;
+	flex-basis: 65%;
+	margin-top:10px;
+}
+.header-container .right-top{
+	border-bottom: 1px solid #d7d4c5;
+	display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+	align-items: center;
+}
+.header .welcome-msg{
+	color:#212121; 
+	font-size:13px;
+	padding:0;
+	margin-right:0;
+	position:relative
+}
+.header .welcome-msg:after{
+	content:"|";
+	padding-left:15px
+}
+.header .links{
+	padding:0
+}
+.header .links a{
+	color:#212121; 
+	font-size:13px;
+}
+.header .links a:hover{
+	text-decoration:none;
+	color: #3e7927
+}
+.header .right-top .login_link{
+	padding:0
+}
+.header .login_link li{
+	padding: 0 17px;
+    position: relative;
+}
+.header .login_link li:last-child{
+	padding-right:0
+}
+.header .login_link li:last-child:after{
+	display:none
+}
+.header .login_link li:after{
+	content:"|";
+	position:absolute;
+	right:0;
+}
+.right-top .store-switcher{
+	font-size:13px;
+}
+.right-top .toolbar-dropdown{}
+.right-top .store-switcher .your-country{
+	color:#212121
+}
+.right-bottom{
+	display: flex;
+    align-items: center;
+}
+/*Search*/
+#search_mini_form{flex-grow: 2; margin-right:30px}
+.header .form-search{
+	background:none;
+	width: 100%;
+    background: transparent;
+	margin:0;
+	float: none;
+	padding:0;
+	border-radius:5px;	
+	border:1px solid #3e7927;
+}
+.header .form-search input.input-text{
+	height:43px;
+	width:100%;		
+	font-size:13px;
+	font-style:italic;
+	color:#3e7927;
+	padding:0 20px;
+}
+.header .form-search button{
+	position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    width: 43px;
+    height: 43px;
+	background:#3e7927
+}
+.header .form-search button span span{
+	
+}
+.header .form-search input.input-text:-webkit-input-placeholder {
+	font-style:italic;
+	color:#3a7523
+}
+.header .form-search input.input-text:-moz-placeholder {
+	font-style:italic;
+	color:#3a7523
+}
+.header .form-search input.input-text:-ms-input-placeholder {
+	font-style:italic;
+	color:#3a7523
+}
+.header .form-search input.input-text:-moz-placeholder {
+	font-style:italic;
+	color:#3a7523
+}
+/*Mini cart*/
+.div_link-cart{
+	flex-grow: 1
+}

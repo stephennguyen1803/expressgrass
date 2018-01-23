@@ -58,6 +58,7 @@ Default layout, loads most of the pages
                
 				
 				<action method="addCss"><stylesheet>css/960.css</stylesheet></action>
+				<action method="addCss"><stylesheet>css/styles_layout-custom.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/jcarousel.css</stylesheet></action>
 				
                 <action method="addItem"><type>skin_css</type><name>css/styles-ie.css</name><params/><if>lt IE 8</if></action>
