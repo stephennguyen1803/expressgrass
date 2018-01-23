@@ -31,36 +31,36 @@
     <div class="header">
         <div class="header-content">
     		<div class="header_row1">
-				<?php echo $this->getChildHtml('store_switcher'); ?>
-    			<span class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></span>
-                <?php echo $this->getChildHtml('topLinks') ?>
-				
-				<div class="div_link-cart">
-    				<?php 
-    					$_cartQty = Mage::getSingleton('checkout/cart')->getSummaryQty()?Mage::getSingleton('checkout/cart')->getSummaryQty():'0'; ?>
-    				<?php 
-    					$_subtotals = Mage::getSingleton('checkout/cart')->getQuote()->getTotals();
-    					$subtotal = $_subtotals["subtotal"]->getValue();
-    				?>
-    				<div class="div_link-cart_inner">
-    					<a href="<?php echo $this->getUrl('checkout/cart') ?>" id="topcartlink" class="top-link-cart"><span><?php echo $this->__('My Cart (') ?><?php echo $_cartQty ?><?php echo $this->__(' Item (s) - ') ?></span><span class="subtotal"><?php echo Mage::helper('checkout')->formatPrice($subtotal)?><?php echo $this->__(')') ?></span></a>                        
-    					<?php echo $this->getChildHtml('cart_sidebar_top');?>
-    				</div>
-    			</div>
-    			
+                <div class='col-left'>
+                    <?php if ($this->getIsHomePage()):?>
+                        <h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
+                    <?php else:?>
+                        <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+                    <?php endif?>
+                </div>
+                <div class='col-right'>
+                    <div class='right-top'>
+                        <?php echo $this->getChildHtml('store_switcher'); ?>
+                        <span class="welcome-msg"><?php echo $this->getWelcome() ?> <?php echo $this->getAdditionalHtml() ?></span>
+                        <?php echo $this->getChildHtml('topLinks') ?> 
+                    </div>
+                    <div class='right-bottom'> 
+                        <?php echo $this->getChildHtml('topSearch') ?>
+                        <div class="div_link-cart">
+                            <?php 
+                                $_cartQty = Mage::getSingleton('checkout/cart')->getSummaryQty()?Mage::getSingleton('checkout/cart')->getSummaryQty():'0'; ?>
+                            <?php 
+                                $_subtotals = Mage::getSingleton('checkout/cart')->getQuote()->getTotals();
+                                $subtotal = $_subtotals["subtotal"]->getValue();
+                            ?>
+                            <div class="div_link-cart_inner">
+                                <a href="<?php echo $this->getUrl('checkout/cart') ?>" id="topcartlink" class="top-link-cart"><span><?php echo $this->__('My Cart (') ?><?php echo $_cartQty ?><?php echo $this->__(' Item (s) - ') ?></span><span class="subtotal"><?php echo Mage::helper('checkout')->formatPrice($subtotal)?><?php echo $this->__(')') ?></span></a>                        
+                                <?php echo $this->getChildHtml('cart_sidebar_top');?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     		</div>
-          <p class="respbtn" style="display:none;">Menu</p>
-            <?php if ($this->getIsHomePage()):?>
-    			<h1 class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a></h1>
-            <?php else:?>
-    			<a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
-            <?php endif?>
-    		
-            <div class="quick-access">  
-    			<?php echo $this->getChildHtml('topSearch') ?>
-				<?php echo $this->getChildHtml('shipping_call') ?>
-            </div>
-			
             <?php echo $this->getChildHtml('topContainer'); ?>
 			
 			<?php if($this->getChildHtml('em0059_megamenu') != '') : ?>
