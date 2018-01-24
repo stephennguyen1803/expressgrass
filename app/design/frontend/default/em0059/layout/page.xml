@@ -52,11 +52,10 @@ Default layout, loads most of the pages
                 <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
 
                 <action method="addCss"><stylesheet>css/styles_layout.css</stylesheet></action>
-                <!--action method="addCss"><stylesheet>css/styles_color.css</stylesheet></action-->
 				<action method="addItem"><type>skin_css</type><name>css/lightbox.css</name></action> 
                 
                
-				
+				<action method="addCss"><stylesheet>css/font-awesome.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/960.css</stylesheet></action>
 				<action method="addCss"><stylesheet>css/styles_layout-custom.css</stylesheet></action>
                 <action method="addCss"><stylesheet>css/jcarousel.css</stylesheet></action>

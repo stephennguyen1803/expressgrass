@@ -1,0 +1,32 @@
+<div class="widget widget-static-block"><div class="footer-what">
+<h4 class="footer-title">What We Do</h4>
+<ul class="footer-link">
+<li><a title="" href="#">What is Fashion</a></li>
+<li><a title="" href="#">Categories of Fashion</a></li>
+<li><a title="" href="#"> How Designs work</a></li>
+<li><a title="" href="#">Designer's mind: Illusion</a></li>
+<li><a title="" href="#">Fashion languages</a></li>
+<li><a title="" href="#">traditional</a></li>
+</ul>
+</div>
+<div class="footer-shopping">
+<h4 class="footer-title">Shopping With Us</h4>
+<ul class="footer-link">
+<li><a title="" href="#">Deliveries</a></li>
+<li><a title="" href="#">Returns and refunds</a></li>
+<li><a title="" href="#">Ordering Help</a></li>
+<li><a title="" href="http://localhost/expressgrass/index.php/privacy-policy-cookie-restriction-mode?___SID=U">Security and Privacy</a></li>
+<li><a title="" href="#">Term and Conditions</a></li>
+<li><a title="" href="#">Frequently Asked Questions</a></li>
+</ul>
+</div>
+<div class="footer-about">
+<h4 class="footer-title">About Us</h4>
+<ul class="footer-link">
+<li><a title="" href="http://localhost/expressgrass/index.php/?___SID=Uabout-magento-demo-store">About Trip</a></li>
+<li><a title="" href="http://localhost/expressgrass/index.php/?___SID=Ucontacts">Contact Us</a></li>
+<li><a title="" href="#">Partners</a></li>
+<li><a title="" href="#">Careers</a></li>
+<li><a title="" href="#">Store Finder</a></li>
+</ul>
+</div></div>
