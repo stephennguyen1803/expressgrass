@@ -62,7 +62,7 @@
     <?php endif; ?>    
 </div>
 
-<!--script type="text/javascript">
+<script type="text/javascript">
 	function mycarousel_initCallback(carousel) {
     jQuery('#slideshow-featured-product .navigation a').bind('click', function() {
         jQuery('#slideshow-featured-product .navigation a').removeClass('active');
@@ -76,11 +76,13 @@
         scroll: 5,
 		initCallback: mycarousel_initCallback,
 		// This tells jCarousel NOT to autobuild prev/next buttons
-		buttonNextHTML: null,
-		buttonPrevHTML: null,			
+        buttonNextHTML: "<div>></div>",
+        buttonPrevHTML: "<div><</div>",
+        buttonNextEvent: "click",
+        buttonPrevEvent: "click",			
 		animation:3000,
         auto:0,
 		wrap: 'circular'
         });
     });	
-</script-->
+</script>
