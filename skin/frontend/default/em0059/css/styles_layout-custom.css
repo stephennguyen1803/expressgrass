@@ -10,6 +10,16 @@ body {
   font: 14px/1.35 OpenSans, Helvetica, sans-serif;
 }
 
+.wrapper-content {
+  background: none;
+}
+
+.img-responsive {
+  max-width: 100%;
+  display: inline-block;
+  height: auto;
+}
+
 /********************/
 .header-container {
   background-image: url(../images/body-bg.jpg);
@@ -247,6 +257,189 @@ ul.menu li.submenu a.drop.level-top {
   height: auto;
   line-height: unset;
   padding: 18px 0;
+}
+
+/*Main Content*/
+.main-banner-top {
+  margin: 30px 0;
+}
+
+/*Feature Product*/
+.widget.em-widget-featured-products-grid .widget-title h2 {
+  font-size: 40px;
+  font-family: Raleway-ExtraBold;
+  color: #3e7927;
+  padding-bottom: 20px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.widget.em-widget-featured-products-grid .widget-title h2:after {
+  content: "";
+  min-width: 300px;
+  height: 4px;
+  background: #3e7927;
+  position: absolute;
+  bottom: 0;
+  left: calc((100% - 300px)/2);
+}
+
+/*Brand slider*/
+.content-slideshow-footer.brand-slider {
+  background: #ffffff;
+  margin: 50px 0;
+  padding: 25px 0;
+  border: 0;
+}
+.content-slideshow-footer.brand-slider .slideshow-box {
+  border: 0;
+  margin: 0 40px;
+}
+.content-slideshow-footer.brand-slider li img {
+  filter: grayscale(100%);
+  /* Current draft standard */
+  -webkit-filter: grayscale(100%);
+  /* New WebKit */
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: gray;
+  /* IE6+ */
+  opacity: 0.5;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.content-slideshow-footer.brand-slider li:hover img {
+  filter: grayscale(1);
+  filter: none;
+  opacity: 1;
+}
+
+/*Brand slider*/
+.home-accessories {
+  margin: 50px 0;
+  padding: 15px;
+  background: #ffffff;
+}
+.home-accessories .widget-title {
+  text-align: left;
+  padding: 40px 10px 20px;
+}
+.home-accessories .widget-title h2 {
+  margin: 0;
+  font-size: 20px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.home-accessories .jcarousel-next {
+  border-left: 0;
+}
+.home-accessories .jcarousel-prev:after {
+  content: "/";
+  font-size: 30px;
+  position: absolute;
+  right: -4px;
+  top: -11px;
+}
+.home-accessories #products-by-category .jcarousel-clip-horizontal {
+  overflow: hidden;
+}
+.home-accessories #products-by-category .products-grid li {
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  width: auto;
+}
+.home-accessories #products-by-category .products-grid li .product-name {
+  margin-top: 20px;
+}
+.home-accessories #products-by-category .products-grid li .product-name a {
+  font-size: 16px;
+  color: #010101;
+  font-weight: 400;
+  text-transform: capitalize;
+  word-wrap: break-word;
+}
+.home-accessories #products-by-category .products-grid li .product-name a:hover {
+  color: #3e7927;
+}
+.home-accessories #products-by-category .products-grid li .price-box .price {
+  font-size: 16px;
+}
+
+.home-banner a {
+  float: none;
+  margin: 0;
+}
+.home-banner a:first-child {
+  float: none;
+}
+
+/*Footer*/
+.wrapper-footer {
+  background: none;
+}
+.wrapper-footer .container_24 {
+  border-top: 1px solid #a8a69a;
+}
+.wrapper-footer .info-container {
+  padding: 0;
+}
+.wrapper-footer .footer-col {
+  padding: 0;
+}
+.wrapper-footer .footer-col .footer-title {
+  font-size: 15px;
+  color: #000000;
+  font-family: "OpenSans-Bold";
+}
+.wrapper-footer .footer-col .footer-link {
+  list-style: inherit;
+  list-style-type: disc;
+}
+.wrapper-footer .footer-col .footer-link li {
+  background: none;
+  line-height: unset;
+  padding: 0;
+  margin: 10px 0 10px 20px;
+}
+.wrapper-footer .footer-col .footer-link li a {
+  color: #222222;
+  font-size: 14px;
+}
+.wrapper-footer .blog-container {
+  padding: 0;
+}
+.wrapper-footer .payment-method {
+  margin: 0;
+}
+.wrapper-footer .follow-us {
+  background: none;
+  display: none;
+}
+.wrapper-footer .footer-end {
+  display: none;
+}
+.wrapper-footer .footer-container {
+  border-top: 0;
+}
+
+/*responsive*/
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .header_row1 {
+    width: auto;
+    padding: 0 10px;
+  }
+  .header_row1 .col-right {
+    flex-basis: 70%;
+  }
+  .header_row1 .col-right .right-top {
+    display: block;
+    width: 100%;
+    float: right;
+    clear: both;
+  }
 }
 
 /*# sourceMappingURL=styles_layout-custom.css.map */
