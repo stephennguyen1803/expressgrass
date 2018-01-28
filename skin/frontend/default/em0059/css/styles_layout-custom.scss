@@ -426,9 +426,65 @@ ul.menu{
 		display:none
 	}
 	.footer-end{display:none}
-	.footer-container{
-		border-top:0
+	.block-newsletter{
+		width: 100%;
+		margin: 35px 0 0 0;
+		padding: 10px;
+		text-align: center;		
+		background: repeating-linear-gradient( 135deg, #5b799d, #5b799d 10px, #fff7e0 10px, #fff7e0 20px, #cf5854 20px, #cf5854 30px, #fff7e0 30px, #fff7e0 40px ) !important;
+		.block-subscribe{
+			background: #fff7e0;
+			margin:0;
+			padding:30px;
+		}
+		.block-title{
+			padding:0;
+			background:none;
+			span{
+				color:#1a1a1a !important;
+				font:15px OpenSans-Bold !important;
+			}
+		}
+		.block-content{
+			overflow:hidden
+		}
+		.input-box{
+			width:100%;
+			overflow:hidden;
+			box-shadow: 3px 3px 3px #ededed inset;
+			background: #ffffff;
+			input{
+				width: 100%;
+				height: 100%;
+				padding: 0 15px;
+				font-size: 15px;				
+				height: 45px;				
+			}
+		}
+		.actions{
+			float: left;
+			width: 100%;
+			margin: 10px 0;
+			button{
+				width: 100%;
+				background: #00aa01;
+				height: 45px;
+				span {
+					background:none;
+					height: auto;
+					span{
+						background:none;
+						font: 14px OpenSans-Bold;
+						color:#ffffff;
+						padding: 8px 0;
+					}
+				}
+			}
+		}
 	}
+}
+.footer-container{
+	border-top:0
 }
 /*responsive*/
 @media screen and (min-width:768px) and (max-width:1199px){

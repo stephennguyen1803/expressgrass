@@ -421,7 +421,64 @@ ul.menu li.submenu a.drop.level-top {
 .wrapper-footer .footer-end {
   display: none;
 }
-.wrapper-footer .footer-container {
+.wrapper-footer .block-newsletter {
+  width: 100%;
+  margin: 35px 0 0 0;
+  padding: 10px;
+  text-align: center;
+  background: repeating-linear-gradient(135deg, #5b799d, #5b799d 10px, #fff7e0 10px, #fff7e0 20px, #cf5854 20px, #cf5854 30px, #fff7e0 30px, #fff7e0 40px) !important;
+}
+.wrapper-footer .block-newsletter .block-subscribe {
+  background: #fff7e0;
+  margin: 0;
+  padding: 30px;
+}
+.wrapper-footer .block-newsletter .block-title {
+  padding: 0;
+  background: none;
+}
+.wrapper-footer .block-newsletter .block-title span {
+  color: #1a1a1a !important;
+  font: 15px OpenSans-Bold !important;
+}
+.wrapper-footer .block-newsletter .block-content {
+  overflow: hidden;
+}
+.wrapper-footer .block-newsletter .input-box {
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 3px 3px 3px #ededed inset;
+  background: #ffffff;
+}
+.wrapper-footer .block-newsletter .input-box input {
+  width: 100%;
+  height: 100%;
+  padding: 0 15px;
+  font-size: 15px;
+  height: 45px;
+}
+.wrapper-footer .block-newsletter .actions {
+  float: left;
+  width: 100%;
+  margin: 10px 0;
+}
+.wrapper-footer .block-newsletter .actions button {
+  width: 100%;
+  background: #00aa01;
+  height: 45px;
+}
+.wrapper-footer .block-newsletter .actions button span {
+  background: none;
+  height: auto;
+}
+.wrapper-footer .block-newsletter .actions button span span {
+  background: none;
+  font: 14px OpenSans-Bold;
+  color: #ffffff;
+  padding: 8px 0;
+}
+
+.footer-container {
   border-top: 0;
 }
 
