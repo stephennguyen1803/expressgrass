@@ -465,17 +465,32 @@ ul.menu li.submenu a.drop.level-top {
 .wrapper-footer .block-newsletter .actions button {
   width: 100%;
   background: #00aa01;
+  border: 1px solid #00aa01;
   height: 45px;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
 }
 .wrapper-footer .block-newsletter .actions button span {
   background: none;
   height: auto;
 }
 .wrapper-footer .block-newsletter .actions button span span {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
   background: none;
   font: 14px OpenSans-Bold;
   color: #ffffff;
   padding: 8px 0;
+}
+.wrapper-footer .block-newsletter .actions button:hover {
+  background: #ffffff;
+}
+.wrapper-footer .block-newsletter .actions button:hover span span {
+  color: #00aa01;
 }
 
 .footer-container {

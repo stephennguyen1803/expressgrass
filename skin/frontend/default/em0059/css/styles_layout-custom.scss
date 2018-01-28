@@ -468,15 +468,24 @@ ul.menu{
 			button{
 				width: 100%;
 				background: #00aa01;
+				border:1px solid #00aa01;
 				height: 45px;
+				@include em-transition();
 				span {
 					background:none;
 					height: auto;
 					span{
+						@include em-transition();
 						background:none;
 						font: 14px OpenSans-Bold;
 						color:#ffffff;
 						padding: 8px 0;
+					}
+				}
+				&:hover{
+					background: #ffffff;
+					span span {
+						color:#00aa01
 					}
 				}
 			}
