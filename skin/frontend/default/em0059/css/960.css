@@ -21,11 +21,8 @@ body {
 /* Containers
 ----------------------------------------------------------------------------------------------------*/
 .container_24 {
-	padding-right: 15px;
-	padding-left: 15px;
 	margin-right: auto;
 	margin-left: auto;
-	/* width: 984px; */
 }
 @media (min-width: 768px) {
   .container_24 {
@@ -43,8 +40,7 @@ body {
   }
 }
 .row {
-  margin-right: -15px;
-  margin-left: -15px;
+  
 }
 /* Grid >> Global
 ----------------------------------------------------------------------------------------------------*/
@@ -75,9 +71,7 @@ body {
 .grid_23,
 .grid_24 {
 	position: relative;
-	min-height: 1px;
-	padding-right: 15px;
-	padding-left: 15px;
+	min-height: 1px
 }
 .grid_1,
 .grid_2,

@@ -120,7 +120,7 @@ body { background:#fff; font:12px/1.35 Arial, Helvetica, sans-serif; color:#2020
 }
 
 
-img { border:0; vertical-align:top;}
+img { border:0; vertical-align:top; max-width: 100%; height: auto;}
 
 a { color:#2f2f2f; text-decoration:none;}
 a:hover { text-decoration:underline;}
