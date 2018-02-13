@@ -239,7 +239,7 @@ body {
       background: #3e7927; }
   .div_link-cart .block-cart {
     top: 100%;
-    min-width: 300;
+    min-width: 300px;
     width: 100%; }
     .div_link-cart .block-cart .empty {
       padding: 20px;
@@ -665,6 +665,8 @@ ul.menu {
     .widget.em-widget-featured-products-grid .widget-title h2:after {
       min-width: 200px;
       left: calc((100% - 200px)/2); }
+  .div_link-cart_inner {
+    float: left; }
   .home-accessories {
     margin: 25px 0; }
     .home-accessories .widget-title {
