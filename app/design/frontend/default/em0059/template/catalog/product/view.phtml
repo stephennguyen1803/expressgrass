@@ -73,13 +73,13 @@
             <?php echo $this->getTierPriceHtml() ?>
             <?php echo $this->getChildHtml('extrahint') ?>
             
-			<?php $this->helper('yotpo')->showQABottomline($this, $_product); ?><?php if (!$this->hasOptions()):?>
-                <div class="add-to-box">
+		
+            <div class="add-to-box">
                 <?php if($_product->isSaleable()): ?>
                     <?php echo $this->getChildHtml('addtocart') ?>                        
                 <?php endif; ?>                
             </div>
-            <?php endif; ?>
+
             
             <?php echo $this->getChildHtml('other');?>
 
