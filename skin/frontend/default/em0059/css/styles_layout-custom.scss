@@ -222,6 +222,7 @@ body{
 }
 .store_view .shipping_call{display:none}
 /*Mini cart*/
+.div_link-cart_inner{position:relative}
 .div_link-cart {
 	flex-grow: 1;
 	a.top-link-cart{
@@ -240,6 +241,15 @@ body{
 		&:hover{
 			text-decoration:none;
 			background:$main-color;
+		}
+	}
+	.block-cart{
+		top:100%;
+		min-width:300;
+		width:100%;
+		.empty{
+			padding: 20px;
+			text-align: center;
 		}
 	}
 }
